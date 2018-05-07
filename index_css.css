@@ -1,0 +1,557 @@
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+#home {
+    --first-color: #674ea7;
+    --second-color: #f4e767;    
+    --light-gray: lightgray;
+}
+
+#next {
+    --first-color: tomato;
+    --second-color: deepskyblue;    
+    --light-gray: lightgray;
+}
+html,body {
+    padding: 0;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 0.2em;
+    padding-bottom: 0.2em;
+    color: var(--first-color);
+}
+p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+body {
+    display: flex;
+}
+.wrap {
+    left: 280px;
+}
+#offcanvas-left,
+#offcanvas-right {
+    flex: 0 0 280px;
+    background-color: #111;
+    color: white;
+    transition-duration: .5s;
+}
+#offcanvas-left.hide {
+    margin-left: -280px;
+}
+#offcanvas-right.hide {
+    margin-right: -280px;
+}
+.togglebar {
+    background-color: #232323;
+    flex: 0 0;
+    min-width: 50px;
+    max-width: 5px;
+}
+.toggle i {
+    height: 80px;
+    font-size: 1.4em;
+    width: 100%;
+    color: var(--first-color);
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+.toggle i:hover {
+    color: var(--second-color);
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 95%;
+}
+.center header {
+    background-color: var(--first-color);
+    color: white;
+}
+header {
+    background-color: blueviolet;
+    flex: 0 0 40px;
+    color: white;
+    
+    /* justify-content: center; */
+    padding: 20px;
+}
+header nav {
+    background-color: transparent;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+.center header nav a:hover {
+    text-decoration: underline
+}
+nav {
+    background-color: #f0f0f0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+nav ul li{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    display: inline-flex;
+    padding: 10px;
+}
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+.center section {
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+figure.hero {
+    position: relative;
+    height: 0;
+    padding-left: 0;
+    padding-bottom: 35%;
+    overflow: hidden;
+    margin: 0;
+}
+figure.hero img {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    transform: scale(1.03);
+}
+figure.hero figcaption{
+    position: absolute;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 50%;
+    color: white;
+    
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    padding: 20px 0;
+}
+figure.hero figcaption * {
+    font-weight: bold;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#offcanvas-left ul,
+#offcanvas-right ul {
+    padding: 0
+}
+#offcanvas-left ul li,
+#offcanvas-right ul li {
+    color: white;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    padding: 10px; 
+    border-bottom: 1px solid #222
+    
+}
+#offcanvas-left a,
+#offcanvas-right a {
+    color: white;
+    text-decoration: none;
+}
+
+#offcanvas-left li:hover a,
+#offcanvas-right li:hover a {
+    color: var(--first-color);
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-column-gap: 20px;
+    background-color: var(--second-color);
+    flex: 0 0 80px;
+    flex-direction: row;
+    padding: 40px 0px;
+    /* min-height: 80px; */
+}
+footer section:first-child {
+    grid-column: 2;
+}
+.no-style li {
+    list-style-type: none;
+}
+
+.no-style ul {
+    margin-top: 0;
+    padding: 0;
+}
+
+.no-style b {
+    margin-bottom: 0;
+    padding: 0;
+}
+.no-style address {
+    font-style: normal;
+}
+form {
+    /* width: 100%; */
+    background-color: white;
+    padding: 20px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 425px; */
+    /* width: 100%; */
+    /* padding: 20px 20px; */
+}
+
+form input, textarea {
+    margin: 10px 0;
+    border: 0;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form input[type=submit] {
+    /* width: 100%; */
+    background-color: var(--first-color);
+}
+
+form textarea {
+    min-height: 60px;
+    max-height: 100px;
+    resize: vertical;
+}
+
+main {
+    min-height: 500px;
+}
+article {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-column-gap: 20px;
+    padding-bottom: 100px;
+}
+
+article > * {
+    grid-column: 2;
+    min-width: 0;
+}
+
+article > figure {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+article > aside {
+    grid-column: 3;
+    color: #666;
+    font-size: 0.8em;
+    padding-right: 20px;
+}
+
+article > blockquote {
+    grid-column: 2 / -2;
+    margin: 10px 0;
+    color: #888;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    border-left: 10px solid #f0f0f0;
+    padding-left: 10px;
+    margin-left: -20px;
+}
+
+
+/* Table styles */
+
+table.styled {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.styled thead, table.styled th {
+    background-color: #dfdfdf;
+}
+table.styled thead, table.styled th {
+    text-align: center;
+}
+table.styled th, table.styled td {
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+footer table.styled th {
+    background: none;
+    text-align: left;
+}
+footer table.styled th, footer table.styled td {
+    border: 0;
+}
+
+
+p mark {
+    background-color: var(--first-color);
+    padding: 0 5px;
+    color: white;
+    font-weight: normal;
+}
+hr {
+    background-color: var(--first-color);
+    height: 2px;
+    width: 100%;
+    border: 0;
+}
+/* General styling */
+
+
+img {
+    width: 100%;
+}
+
+.line-numbers a {
+    text-decoration: none;
+    color: #000;
+    padding-right: 1em;
+}
+
+code {
+    background: #eee;
+    padding: 2px 5px;
+}
+
+pre {
+    background: #eee;
+    padding: 10px 15px;
+    overflow: auto;
+}
+
+pre > code {
+    padding: 0;
+}
+.responsive-vid {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.responsive-vid iframe,
+.responsive-vid video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.container {
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto; 
+  position: relative;
+  width: 50%;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+    margin-left: auto;
+    margin-right: auto;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: gold;
+  overflow: hidden;
+  height:100%;
+  transition: .9s ease;
+}
+
+.container:hover .overlay {
+    margin-left: auto;
+    margin-right: auto;
+  bottom: 0;
+  height: 100%;
+  opacity:  0.8;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn {
+    border: 2px solid black;/* Remove borders */
+    background-color: gold;
+    color: black; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.success {border-color: #ffff00;color : black;} /* Green */
+.success:hover {background-color: #ffff4d;}
+
+.parallax {
+    /* The image used - Jejuri - video - starting*/
+    background-image: url("https://lh3.googleusercontent.com/6OKBg2tbUh1L-YtkxKiXC_4K5InszIzuAIWKfBA1w0nDGCWpb1YugE1xpFqTLw6nCLZQ12ZTUKbInHez85OWbqqP2Xei66_TGnancgnC3tfby-QWl5WFk4pA0VPDuyaaMrTu5-CmXkZKQDaqCQhbtQzNU-Zi3tCLMk8fTUDX4oqseiPOagF9ql6BhDsHuSPk2LE5HqKj3gm2rVxh6fNrtrI0aesQzYRPgqOXwCaCoQSwRS54KH0TiuikfDvAo4joCzCz7qGsWi9cc8_bn--rKAPgfu_7o51BfArpneshnUEMGss4xl5HGx-9MOdsl-vBzicw3soLhEieoRxMa6mTe5w0bZGj2qIflZKGTyfIHJGD2ww6kM_FJuIxns3-oQecBOOgdWAymM6Sdh1BBnRBOQIu3tR2-bKXedZDJvYJ7PaTLDrU-qFkp911TjNW53L6kXFCgCs8G0JukeFBFkv5AUixGygY3SBFhIPTigKxJA8L9ksQzkfwqdMpO26AVBHPl5sPw9i0DbkYhLckdPnhFR4rGtVEiWjj4PYnp3tx1W9u-ZFPjVPdophbfnZq5rSg6TjldOGDKmrTyYq5dSWOGJ5_SRjgZdk5H3jGWGw=w1133-h637-no");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax1 {
+    /* The image used - 5AM dighi donghar sunrise*/
+    background-image: url("https://lh3.googleusercontent.com/EhqgshFwPrD3GB7n-TZsff8fcbSLyaSRwAms6pPWo0DN3I4cV15TxRTu_khYZxWNxPSK6nNKl6WQ3xbo8nQiabHQKO_i1p5-GoODLrQovGmFWZKe3CuHjDY3JWujANTBaWRR1Y2ljpvylujemB3ZNt6YgWlxb7qFhvfIA142gsJZQBS069hDaz9rnZ9LmNkaSC_Xto-ouXZFChuEHisND0giLPGsUI9LwIgc3wZeLBHUFnHR7nl4vWah4WyWfkvSsqrlTaKCgEuOhpu-LdGONjboWbsv9X9_t5rrR4sf9Vpz_vc3ws4QUAo_eGsGfKYj6iFz-fVVydzGccH13RP8HpQdEcHciqjvXaAGNQ98DVIeTKZqMVStNbz4xgsE2GFhkeG9ZHcItCTCtgr8DFdZNnPOfIDPw2syh4DF6jMntL4qcN4ml0XgTOrSQD9CgazhkQ9DAvpFygYL897jwQhT-EqdNkRd_NrGGuQR7pJCLeii_0Nw9l-4UbxHGxT2s6f1LH4FAMkRi9QyFInvvbczANinLyQVAuA059jaZd6hBndKq2jGkz4fjoGph_HLLMqK_TdmnEJtu-e2SNiQRbNBI5Ve4u4hwMx_vwsNjWKP=w1133-h637-no");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used - diwali panti */
+    background-image: url("https://lh3.googleusercontent.com/S346fPnTAs7_s_TWLbTrZ2Xlu4ILvfWB3xmiZqUd6B6CDpQWs7ol7uJCpiQHDMyGVmjF67So9nnfCa5U-0pGHH2WQmbeKSTZOB8ZOxCRp4nvrW_ncZndsxsPUS5Lf_mj0YKvQTtyUsj_1CV_5HQ8cnLEBGDsAkpyXQOv6c2NzVDAfMNLnMm2Hl9W6c-1AGnZ1sqm4OrjDNsAS2xb8eptza8KwE230QaLueZA38OnFwchxoQ3ZcGxj3kBoEvtIOArw7iGe5szTvnxV2bKiTzuEtKGM9OeZUB9NJR1Y6Bm1jOWKjOyjJ0566TYDMsEEt6QQsc_6p_jhqbxP4pn99HITe1AXrbQGhACOgzgoXNOApXK0Df-nFf9zURLAymwbCQTbOiULNo5OU1opKANg8RG-zJ4Vdo9Xm9UPZQ-l_ZwnEHB4s47lpRX7u1E9LzqMXLI_a5gUNXjICLBZx03HUfRfM3wCAW-4PqsxloyeTqgd7BMgirz6-EJ0Slc4Sk-BGboCtF-5pQmqUJ3hGApb8ZixFu5GaVhVo4rca3TYr2tiHqVgbRQEHL-VHnOfWRrqyRKsxrVd6nD0MVYtVzZtq_vr2IzBnBxK4KNnwsWKJmg=w1133-h637-no");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used - mi and shelake at McD*/
+    background-image: url("https://lh3.googleusercontent.com/SWTqkqK74RZmC70XHpNZeVFrnoG_PN6jTaVP8tiTq380q0DA9D6PpBz0oR9iegi8yJSMV67G-TCM8xG0k9O_nhT2S4v82EHMpev0wC5ZWR2tdXgsduTUdT0r8cdXCeKXPFzj1_06X7uj0AI2bVVJ7Kxd9pkJyZbUziwpbfNXXZBqmQGOIvioD-6yxtodk1eFrD9uz5uUoqfYeH3TUDaSYrBd_5xJVbcdMIlD_GSc-1guxhSE6JXf5j5KloMHm1vOqST65dgrNb0YC2ELAOJdyGQwG1JAoKA705gzpFS-_oi8s2sXyDLxk8L1eXDZLIW2lpO7bsK8qWCX4mmt3qbEFWJMNaBp947XNUHBwpfKQUmB82LXPbiT17d5xKdvxYlUcO3ZhaKfoqcEnjbixXhvXgLzpoIFpCUYQLfE2X9NeiTKEr9GYkCnrb-WjekruxtgYolnUCobR9hq7tdbB7dCb77ATLDR4NyovZx1Plbiy1x2YrEAaHeqtaIKDik_8sCyjxc1GvsBAFPciMCgp-5yk0cLTFmOER7OCzYUOVCPnCZvWGnpiN6Fm3V9WqDt2rwkUR14YJYxtTXazlrS4EaW2pXRpzQ-UAEbrWmrSGk=w956-h637-no");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax4 {
+    /* The image used - Michael Jackson - black and white*/
+    background-image: url("http://cdn.desktopwallpapers4.me/wallpapers/digital-art/1920x1080/2/12285-michael-jackson-outline-1920x1080-digital-art-wallpaper.jpg");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax5 {
+    /* The image used - Michael Jackson - Awesome*/
+    background-image: url("http://hddesktopwallpapers.in/wp-content/uploads/2015/06/Michael-Jackson-Wallpapers-HD-A4.jpg");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+    padding-top: 30px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax6 {
+    /* The image used - Michael Jackson - Awesome*/
+    background-image: url("https://www.hdwallpaper.nu/wp-content/uploads/2015/12/michael_jackson_wallpaper_2005.jpg");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax7 {
+    /* The image used - Michael Jackson - Awesome*/
+    background-image: url("http://hdwallpapersbuzz.com/wp-content/uploads/2017/03/michael-jackson-wallpaper-images-4-1.jpg");
+
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
